@@ -4,12 +4,12 @@ const netId = Number(process.env.NET_ID) || 1
 
 const zkCredentialUpdaterAddress = {
   netId1: "0xaa92cC5E77beAA554B1a57D479D90BC91d083335",
-  netId5: "0x1F49bD7072a0C64D3D2906808d1dd3945F26ED7e",
+  netId11155111: "0xd38Eb8b08E4Cb15766d47EF80f91589829243e0A"
 }
 
 const rpcUrl = {
   netId1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_PRIVATE_KEY}`,
-  netId5: `https://eth-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_PRIVATE_KEY}`
+  netId11155111: `https://eth-sepolia.g.alchemy.com/v2//${process.env.ALCHEMY_PRIVATE_KEY}`
 }
 
 module.exports = {

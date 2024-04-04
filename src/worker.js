@@ -51,7 +51,7 @@ async function getTxObject({ data }) {
     const trustedForwarderInterface = new ethers.utils.Interface(trustedForwarderABI)
     const encodeFunctionData = trustedForwarderInterface.encodeFunctionData(
       'execute',
-      [data.req, data.signature],
+      [data.req],
     )
 
     return {

@@ -40,14 +40,15 @@ const Uint48Type = { type: 'string', pattern: '^0x[a-fA-F0-9]{1,12}$' }
 const zkCredentialUpdateSchema = {
   type: 'object',
   properties: {
-    request: {
+    req: {
       type: 'array',
-      maxItems: 7,
-      minItems: 7,
-      items: [addressType, knownUpdateCredentialType, Uint256Type, Uint256Type, Uint48Type, dataType, signatureType],
+      maxItems: 6,
+      minItems: 6,
+      items: [addressType, knownUpdateCredentialType, Uint256Type, Uint256Type, Uint48Type, dataType],
     },
+    signature: signatureType,
   },
-  required: ['request'],
+  required: ['req', 'signature'],
 }
 
 const validateZkCredentialUpdate = ajv.compile(zkCredentialUpdateSchema)

@@ -9,7 +9,7 @@ const zkCredentialUpdaterAddress = {
 
 const rpcUrl = {
   netId1: `https://eth-mainnet.g.alchemy.com/v2/${process.env.ALCHEMY_PRIVATE_KEY}`,
-  netId11155111: `https://eth-sepolia.g.alchemy.com/v2//${process.env.ALCHEMY_PRIVATE_KEY}`
+  netId11155111: `https://eth-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_PRIVATE_KEY}`
 }
 
 module.exports = {

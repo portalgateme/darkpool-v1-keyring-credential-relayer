@@ -42,7 +42,7 @@ async function start() {
     console.log('Worker started')
   } catch (e) {
     await logRelayerError(redis, e)
-    console.error('error on start worker', e.message)
+    console.error('error on start worker', e.message,e.stack)
   }
 }
 

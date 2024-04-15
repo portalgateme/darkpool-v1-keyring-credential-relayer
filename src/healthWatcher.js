@@ -8,6 +8,7 @@ const provider = getProvider()
 
 async function main() {
   try {
+    console.log("Starting health check...")
     const account = new ethers.Wallet(privateKey, provider);
     const balance = await account.getBalance()
     if (toBN(balance.toString()).lt(toBN(minimumBalance))) {
@@ -15,8 +16,9 @@ async function main() {
     }
 
     await redis.hset('health', { status: true, error: '' })
+    console.log("Health check started")
   } catch (e) {
-    console.error('healthWatcher', e.message)
+    console.error('healthWatcher', e.message, e.stack)
     await redis.hset('health', { status: false, error: e.message })
   }
 }

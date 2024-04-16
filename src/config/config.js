@@ -4,7 +4,7 @@ const netId = Number(process.env.NET_ID) || 1
 
 const zkCredentialUpdaterAddress = {
   netId1: "0xaa92cC5E77beAA554B1a57D479D90BC91d083335",
-  netId11155111: "0xd38Eb8b08E4Cb15766d47EF80f91589829243e0A"
+  netId11155111: "0xb23a12b93419DfDd7719c8b9C610451Fe9431B49"
 }
 
 const rpcUrl = {

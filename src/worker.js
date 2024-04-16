@@ -42,16 +42,25 @@ async function start() {
     console.log('Worker started')
   } catch (e) {
     await logRelayerError(redis, e)
-    console.error('error on start worker', e.message,e.stack)
+    console.error('error on start worker', e.message, e.stack)
   }
 }
 
 async function getTxObject({ data }) {
   if (data.type === jobType.ZK_CREDENTIAL_UPDATE) {
     const trustedForwarderInterface = new ethers.utils.Interface(trustedForwarderABI)
+    const requestData = {
+      from: data.req[0],
+      to: data.req[1],
+      value: data.req[2],
+      gas: data.req[3],
+      deadline: data.req[4],
+      data: data.req[5],
+      signature: data.signature,
+    }
     const encodeFunctionData = trustedForwarderInterface.encodeFunctionData(
       'execute',
-      [data.req, data.signature],
+      [requestData],
     )
 
     return {

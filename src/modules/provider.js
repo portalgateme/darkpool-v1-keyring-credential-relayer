@@ -1,6 +1,6 @@
 const { ethers } = require("ethers")
-const { alchemyPrivateKey, networkName } = require('../config/config')
+const { httpRpcUrl, netId } = require('../config/config')
 const getProvider = () => {
-  return new ethers.providers.AlchemyProvider(networkName, alchemyPrivateKey)
+  return new ethers.providers.JsonRpcProvider(httpRpcUrl, netId)
 }
 module.exports = getProvider

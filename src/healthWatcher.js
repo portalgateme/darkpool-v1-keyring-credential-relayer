@@ -23,4 +23,4 @@ async function main() {
   }
 }
 
-setSafeInterval(main, 30 * 1000)
+setSafeInterval(main, 600 * 1000)

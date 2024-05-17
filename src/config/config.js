@@ -3,7 +3,7 @@ require('dotenv').config()
 const netId = Number(process.env.NET_ID) || 1
 
 const zkCredentialUpdaterAddress = {
-  netId1: "0xaa92cC5E77beAA554B1a57D479D90BC91d083335",
+  netId1: "0x3fe89A8330c0b8397149759e071fA02f9D9A1374",
   netId11155111: "0xb23a12b93419DfDd7719c8b9C610451Fe9431B49"
 }
 

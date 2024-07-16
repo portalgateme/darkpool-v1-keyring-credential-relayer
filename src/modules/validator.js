@@ -29,7 +29,7 @@ ajv.addKeyword('isKnownUpdateCredential', {
 
 const addressType = { type: 'string', pattern: '^0x[a-fA-F0-9]{40}$', isAddress: true }
 const knownUpdateCredentialType = { ...addressType, isKnownUpdateCredential: true }
-const signatureType = { type: 'string', pattern: '^0x[a-fA-F0-9]{100,200}$' }
+const signatureType = { type: 'string', pattern: '^0x[a-fA-F0-9]{100,4000}$' }
 const dataType = { type: 'string', pattern: '^0x[a-fA-F0-9]{1,2100}$' }
 //const numberType = { type: "number" }
 const Uint256Type = { type: 'string', pattern: '^0x[a-fA-F0-9]{1,64}$' }
